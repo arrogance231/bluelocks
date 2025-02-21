@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import pb from "@/lib/pocketbase";
+import pb from "../lib/pocketbase";
 
 export interface User {
   id: string;
