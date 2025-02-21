@@ -36,7 +36,9 @@ export default function useAuth() {
     setLoading(true);
     setError(null);
     try {
-      const authData = await pb.collection("users").authWithPassword(email, password);
+      const authData = await pb
+        .collection("users")
+        .authWithPassword(email, password);
       setUser(authData.record ? (authData.record as unknown as User) : null);
       return authData;
     } catch (error: unknown) {
